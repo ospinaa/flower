@@ -1,0 +1,128 @@
+.layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.sticker {
+  position: absolute;
+  filter: drop-shadow(0 4px 8px rgba(26, 20, 18, 0.12));
+}
+
+.heroHeartA {
+  top: 58%;
+  left: 4%;
+  transform: rotate(-12deg);
+}
+
+.heroHeartB {
+  top: 18%;
+  right: 6%;
+  transform: rotate(14deg);
+}
+
+.heroRose {
+  bottom: 8%;
+  right: 2%;
+  transform: rotate(8deg);
+}
+
+.heroSticker {
+  top: 34%;
+  left: 8%;
+  transform: rotate(-6deg);
+}
+
+.tapeA {
+  top: 12%;
+  right: 18%;
+  transform: rotate(24deg);
+}
+
+.heartFlatA {
+  bottom: 14%;
+  left: 6%;
+  transform: rotate(-8deg);
+}
+
+.recHeart {
+  top: 8%;
+  right: 8%;
+  transform: rotate(10deg);
+}
+
+.lollipopA {
+  bottom: 6%;
+  right: 4%;
+  transform: rotate(6deg);
+}
+
+.envelopeA {
+  top: 10%;
+  left: 4%;
+  transform: rotate(-10deg);
+}
+
+.heartFlatB {
+  bottom: 10%;
+  right: 8%;
+  transform: rotate(12deg);
+}
+
+.roseSmall {
+  bottom: 8%;
+  left: 2%;
+  transform: rotate(-6deg);
+}
+
+.confHeart {
+  top: 6%;
+  right: 4%;
+  transform: rotate(8deg);
+}
+
+.songHeart {
+  top: 50%;
+  right: -4%;
+  transform: translateY(-50%) rotate(4deg);
+  opacity: 0.85;
+}
+
+.closingHeart {
+  bottom: -8%;
+  left: -6%;
+  transform: rotate(-8deg);
+  opacity: 0.9;
+}
+
+.lollipopB {
+  bottom: 12%;
+  right: 2%;
+  transform: rotate(-4deg);
+}
+
+.textSticker {
+  display: inline-block;
+  padding: 0.35rem 0.55rem;
+  background: #f8c8d4;
+  color: var(--color-accent-deep);
+  font-family: var(--font-script);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(26, 20, 18, 0.1);
+  white-space: nowrap;
+}
+
+.lollipopLabel {
+  display: block;
+  margin-top: -0.35rem;
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--color-ink);
+  text-align: center;
+}

@@ -1,0 +1,39 @@
+.guide {
+  position: fixed;
+  right: 6vw;
+  bottom: 6vh;
+  z-index: 3;
+  color: var(--color-accent);
+  pointer-events: none;
+  transition: transform 700ms ease-out;
+}
+
+.flower {
+  display: block;
+  width: 13vw;
+  max-width: 58px;
+  min-width: 42px;
+  animation: breathe 6.5s ease-in-out infinite;
+  filter: drop-shadow(0 6px 14px rgba(184, 137, 90, 0.35));
+}
+
+.staticFlower {
+  display: block;
+  width: 13vw;
+  max-width: 58px;
+  min-width: 42px;
+}
+
+.petal {
+  transform-origin: center;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.08) rotate(4deg);
+  }
+}

@@ -1,0 +1,101 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(26, 20, 18, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: fadeIn 320ms ease;
+}
+
+.frame {
+  position: relative;
+  max-width: min(92vw, var(--mobile-max));
+  max-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0.5rem 1.4rem;
+  background: #fff;
+  box-shadow: var(--shadow-lift);
+  animation: riseIn 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.photo {
+  max-width: 100%;
+  max-height: 62vh;
+  object-fit: contain;
+  display: block;
+}
+
+.caption {
+  margin: 0.85rem 0.5rem 0;
+  max-width: 80vw;
+  text-align: center;
+  font-family: var(--font-script);
+  font-size: clamp(1.1rem, 4.5vw, 1.35rem);
+  font-weight: 600;
+  color: var(--color-ink);
+  opacity: 0;
+  animation: captionIn 600ms ease 220ms forwards;
+}
+
+.close {
+  position: absolute;
+  top: -0.65rem;
+  right: -0.65rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid rgba(193, 18, 31, 0.15);
+  background: var(--color-soft);
+  color: var(--color-accent);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-polaroid);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes captionIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdrop,
+  .frame,
+  .caption {
+    animation: none;
+    opacity: 1;
+  }
+}

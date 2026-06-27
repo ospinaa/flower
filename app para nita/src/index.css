@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --color-bg: #f7dde3;
+  --color-ink: #24161c;
+  --color-accent: #a53d57;
+  --color-accent-deep: #7c2d42;
+  --color-soft: #fff8f4;
+  --color-muted: #7b6171;
+  --color-tape: #d9c2a8;
+  --font-display: 'Abril Fatface', 'Georgia', serif;
+  --font-script: 'Caveat', cursive;
+  --font-serif: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --shadow-card: 0 24px 70px rgba(74, 16, 33, 0.2);
+  --shadow-polaroid: 0 8px 24px rgba(36, 22, 28, 0.18), 0 2px 6px rgba(36, 22, 28, 0.08);
+  --shadow-lift: 0 16px 40px rgba(36, 22, 28, 0.16);
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+  --mobile-max: 430px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.55), transparent 24%),
+    radial-gradient(circle at 85% 15%, rgba(255, 176, 191, 0.4), transparent 28%),
+    radial-gradient(circle at 50% 100%, rgba(190, 92, 121, 0.22), transparent 34%),
+    linear-gradient(135deg, #f7dce3 0%, #f0c3cf 40%, #e8b3c0 100%);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: none;
+}
+
+/* Flores suaves, en muy baja opacidad, derivando lentamente detrás de todo. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480' viewBox='0 0 480 480'%3E%3Cdefs%3E%3Cg id='f'%3E%3Cellipse cx='0' cy='-22' rx='12' ry='22'/%3E%3Cellipse cx='0' cy='22' rx='12' ry='22'/%3E%3Cellipse cx='-22' cy='0' rx='22' ry='12'/%3E%3Cellipse cx='22' cy='0' rx='22' ry='12'/%3E%3Ccircle cx='0' cy='0' r='7' fill='%23a53d57' stroke='none'/%3E%3C/g%3E%3C/defs%3E%3Cg fill='none' stroke='%23a53d57' stroke-width='1.6'%3E%3Cuse href='%23f' transform='translate(70,80) rotate(-8) scale(0.9)' opacity='0.16'/%3E%3Cuse href='%23f' transform='translate(340,140) rotate(14) scale(1.3)' opacity='0.1'/%3E%3Cuse href='%23f' transform='translate(150,330) rotate(20) scale(1.05)' opacity='0.13'/%3E%3Cuse href='%23f' transform='translate(400,400) rotate(-15) scale(0.75)' opacity='0.18'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 420px 420px;
+  background-repeat: repeat;
+  animation: floatFlowers 34s ease-in-out infinite alternate;
+}
+
+@keyframes floatFlowers {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 70px -55px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: rgba(165, 61, 87, 0.28);
+  color: var(--color-ink);
+}

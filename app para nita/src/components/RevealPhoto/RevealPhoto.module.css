@@ -1,0 +1,102 @@
+.frame {
+  position: absolute;
+  z-index: 2;
+  padding: 0.45rem 0.45rem 1.6rem;
+  background: #fff;
+  box-shadow: var(--shadow-polaroid);
+  opacity: 0;
+  transform: translateY(32px) rotate(var(--rotate));
+  transition:
+    opacity 800ms ease,
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.visible {
+  opacity: var(--max-opacity, 1);
+  transform: translateY(0) rotate(var(--rotate));
+}
+
+.inner {
+  position: relative;
+  overflow: hidden;
+  background: #e8dfd6;
+  aspect-ratio: 4 / 5;
+}
+
+.inner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(145deg, #f0e6dc 0%, #e2d0c4 50%, #d8c4b8 100%);
+  color: rgba(92, 79, 74, 0.45);
+  font-family: var(--font-script);
+  font-size: 1.4rem;
+}
+
+.tape {
+  position: absolute;
+  top: -0.35rem;
+  right: 0.8rem;
+  width: 3.2rem;
+  height: 1rem;
+  background: var(--color-tape);
+  opacity: 0.88;
+  transform: rotate(18deg);
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(26, 20, 18, 0.12);
+  z-index: 3;
+}
+
+.interactive {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.interactive:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.float {
+  display: block;
+  animation: drift 8s ease-in-out infinite;
+}
+
+.interactive .float {
+  animation-duration: 6.5s;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frame {
+    transition: opacity 400ms ease;
+  }
+
+  .visible {
+    transform: translateY(0) rotate(var(--rotate));
+  }
+
+  .float {
+    animation: none;
+  }
+}

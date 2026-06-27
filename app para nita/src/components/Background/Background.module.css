@@ -1,0 +1,63 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.frame {
+  position: absolute;
+  pointer-events: auto;
+  border-radius: 18px;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: 0 25px 60px -25px rgba(40, 26, 14, 0.35);
+  transition: opacity 900ms ease, filter 1100ms ease;
+  will-change: transform, opacity;
+}
+
+.frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+  filter: saturate(0.94) sepia(0.04);
+}
+
+.interactive {
+  cursor: pointer;
+}
+
+.interactive:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.float {
+  display: block;
+  animation: drift 9s ease-in-out infinite;
+}
+
+.interactive .float {
+  animation-duration: 7.5s;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.6deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frame {
+    transition: opacity 400ms ease;
+  }
+  .float {
+    animation: none;
+  }
+}
