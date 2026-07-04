@@ -36,7 +36,7 @@ export const sections: NarrativeSection[] = [
   {
     id: 'inicio',
     kind: 'hero',
-    heroTitle: ['PARA', 'TI'],
+    heroTitle: ['PARA', 'NITA'],
     phrase: 'Quiero decirte algo...',
     photos: [
       {
@@ -170,7 +170,7 @@ export const sections: NarrativeSection[] = [
     id: 'confesion',
     kind: 'narrative',
     eyebrow: 'Cuatro',
-    phrase: 'Te amo mi mujer hermosa , eres la persona mas increible y maravillosa que Dios pudo haber creado , eres mi gran razon de ser y de esforzarme para ser un exelente espodo y papá en un futuro.',
+    phrase: 'Te amo mi mujer hermosa , eres la persona mas increible y maravillosa que Dios pudo haber creado , eres mi gran razon de ser y de esforzarme para ser un exelente esposo y papá en un futuro.',
     photos: [
       {
         id: 'a',

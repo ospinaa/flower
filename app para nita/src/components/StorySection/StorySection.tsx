@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import { RevealPhoto } from '../RevealPhoto/RevealPhoto'
 import { SongCard } from '../SongCard/SongCard'
 import type { NarrativeSection } from '../../data/sections'
@@ -13,6 +14,7 @@ export function StorySection({ section, photoFor, onPhotoTap }: StorySectionProp
   const isHero = section.kind === 'hero'
   const isClosing = section.kind === 'closing'
   const hasCollage = section.photos.length > 0
+  const navigate = useNavigate()
 
   return (
     <section
@@ -75,11 +77,18 @@ export function StorySection({ section, photoFor, onPhotoTap }: StorySectionProp
           </div>
         )}
 
-        {isClosing && (
-          <div className={styles.closingBox}>
-            <p className={styles.closingHint}>De teban para nita.</p>
-          </div>
-        )}
+{isClosing && (
+  <div className={styles.closingBox}>
+    <p className={styles.closingHint}>Con mucho amor</p>
+    <button
+      type="button"
+      className={styles.propuestaBtn}
+      onClick={() => navigate('/propuesta')}
+    >
+      de teban para nita
+    </button>
+  </div>
+)}
       </div>
     </section>
   )
