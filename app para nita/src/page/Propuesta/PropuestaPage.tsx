@@ -14,7 +14,7 @@ const pasos = [
     numero: '02',
     titulo: 'Reglas',
     texto: 'el 10 de agosto legalmente sera nuestra fecha esepcial donde seremos novios casi esposos , peroo... ',
-    detalle: 'desde el 10 hasta el 14 de agoso tendremos que cumplir ciertos retos o actividades para sellar nuestra con broche de oro.',
+    detalle: 'desde el 10 hasta el 14 de agoso tendremos que cumplir ciertos retos o actividades para sellar nuestra relacion con broche de oro.',
     icono: '🎖️',
   },
   {
