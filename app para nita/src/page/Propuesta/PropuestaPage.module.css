@@ -7,11 +7,12 @@
   margin: 0 auto;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 20% 10%, rgba(255, 252, 242, 0.75), transparent 32%),
-    radial-gradient(circle at 80% 20%, rgba(255, 230, 200, 0.45), transparent 30%),
-    radial-gradient(circle at 50% 90%, rgba(220, 185, 155, 0.3), transparent 38%),
-    linear-gradient(155deg, #f9f0e3 0%, #f3e4cc 45%, #ead5b8 100%);
-  box-shadow: 0 0 80px rgba(26, 20, 18, 0.06);
+     radial-gradient(circle at 20% 10%, rgba(255, 250, 249, 0.75), transparent 32%),
+  radial-gradient(circle at 80% 20%, rgba(250, 198, 186, 0.45), transparent 30%),
+  radial-gradient(circle at 50% 90%, rgba(220, 150, 145, 0.30), transparent 38%),
+  linear-gradient(155deg, #fff8f7 0%, #f7e3de 45%, #eec7bd 100%);
+
+box-shadow: 0 0 80px rgba(88, 42, 42, 0.05);
 }
 
 
@@ -252,4 +253,26 @@
   .photoFrame  { animation: none; }
   .card        { transition: none; }
   .cardScene   { animation: none; }
+}
+
+.retosBtn {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #b87b4a, #8a4f2a);
+  color: #fdf7ef;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(80, 44, 20, 0.25);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.retosBtn:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 10px rgba(80, 44, 20, 0.18);
 }

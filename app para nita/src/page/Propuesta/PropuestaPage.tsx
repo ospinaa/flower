@@ -1,6 +1,7 @@
+import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import styles from './PropuestaPage.module.css'
-import fotoPropuesta from '../../assets/photos/09.jpeg'
+import fotoPropuesta from '../../assets/photos/11.jpeg'
 
 const pasos = [
   {
@@ -70,6 +71,7 @@ function FlipCard({ paso, index }: FlipCardProps) {
 }
 
 export function PropuestaPage() {
+  const navigate = useNavigate()
   return (
     <div className={styles.page}>
       <div className={styles.flowerLayer} aria-hidden="true" />
@@ -110,6 +112,8 @@ export function PropuestaPage() {
           <p className={styles.subtitle}>
            Preparate para lo que sea 
           </p>
+
+          
 
         </section>
       </main>

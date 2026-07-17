@@ -1,8 +1,12 @@
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { ScrollToTop } from './components/ScrollToTop/ScrollToTop'
+import { HamburgerMenu } from './components/HamburgerMenu/HamburgerMenu'
 import { PhotoModal } from './components/PhotoModal/PhotoModal'
 import { StorySection } from './components/StorySection/StorySection'
 import { PropuestaPage } from './page/Propuesta/PropuestaPage'
+import { RetosPage } from './page/Retos/RetosPage'
+import { FinalPage } from './page/Final/FinalPage'
 import { sections } from './data/sections'
 import { usePhotoPool } from './hooks/usePhotoPool'
 import './App.css'
@@ -34,10 +38,16 @@ function Landing() {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="/propuesta" element={<PropuestaPage />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <HamburgerMenu />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/propuesta" element={<PropuestaPage />} />
+        <Route path="/retos" element={<RetosPage />} />
+        <Route path="/final" element={<FinalPage />} />
+      </Routes>
+    </>
   )
 }
 

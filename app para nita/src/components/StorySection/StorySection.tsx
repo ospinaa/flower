@@ -77,18 +77,7 @@ export function StorySection({ section, photoFor, onPhotoTap }: StorySectionProp
           </div>
         )}
 
-{isClosing && (
-  <div className={styles.closingBox}>
-    <p className={styles.closingHint}>Con mucho amor</p>
-    <button
-      type="button"
-      className={styles.propuestaBtn}
-      onClick={() => navigate('/propuesta')}
-    >
-      de teban para nita
-    </button>
-  </div>
-)}
+{}
       </div>
     </section>
   )

@@ -1,0 +1,67 @@
+.backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(30, 12, 8, 0.6);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    animation: fadeIn 300ms ease;
+  }
+  
+  .card {
+    width: min(88vw, 360px);
+    background: #fdf7ef;
+    border-radius: 24px;
+    padding: 2.5rem 1.75rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    box-shadow: 0 32px 80px rgba(30, 12, 8, 0.3);
+    animation: riseIn 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  .emoji {
+    font-size: 3.5rem;
+    line-height: 1;
+    animation: pop 500ms cubic-bezier(0.22, 1, 0.36, 1) 100ms both;
+  }
+  
+  .titulo {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 6vw, 1.7rem);
+    color: #24161c;
+  }
+  
+  .descripcion {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(1rem, 4vw, 1.1rem);
+    line-height: 1.6;
+    color: #5a3d2e;
+  }
+  
+  .btn {
+    margin-top: 0.5rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    background: #b87b4a;
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 140ms ease;
+  }
+  
+  .btn:active { transform: scale(0.96); }
+  
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(24px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+  @keyframes pop    { from { transform: scale(0.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }

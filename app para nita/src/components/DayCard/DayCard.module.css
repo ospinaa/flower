@@ -1,0 +1,106 @@
+.card {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(253, 247, 239, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 16px rgba(80, 44, 20, 0.1);
+    transition: box-shadow 250ms ease;
+  }
+  
+  .unlocked { box-shadow: 0 6px 24px rgba(80, 44, 20, 0.14); }
+  .allDone  { box-shadow: 0 6px 24px rgba(184, 123, 74, 0.25); background: rgba(255, 248, 236, 0.92); }
+  .locked   { opacity: 0.65; }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.1rem 1.2rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    gap: 0.75rem;
+  }
+  
+  .headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .lockIcon  { font-size: 1.2rem; flex-shrink: 0; }
+  
+  .dayLabel {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #24161c;
+    line-height: 1.2;
+  }
+  
+  .counter {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: #b87b4a;
+    margin-top: 2px;
+    letter-spacing: 0.04em;
+  }
+  
+  .chevron { font-size: 0.65rem; color: #b87b4a; flex-shrink: 0; }
+  
+  .progressTrack {
+    height: 4px;
+    background: rgba(184, 123, 74, 0.15);
+    margin: 0 1.2rem;
+  }
+  
+  .progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, #b87b4a, #d4a06e);
+    border-radius: 4px;
+    transition: width 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  .retos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1rem 1.2rem 1.2rem;
+    animation: slideDown 300ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
+  .lockedMsg {
+    margin: 0;
+    padding: 0.4rem 1.2rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    color: #9a7a5e;
+  }
+  
+  .verRecompensa {
+    margin-top: 0.4rem;
+    padding: 0.75rem 1rem;
+    border: 1.5px dashed #b87b4a;
+    border-radius: 12px;
+    background: transparent;
+    color: #b87b4a;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background 200ms ease;
+  }
+  
+  .verRecompensa:active { background: rgba(184, 123, 74, 0.08); }
